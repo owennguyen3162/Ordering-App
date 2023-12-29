@@ -150,10 +150,10 @@
                                 <rect key="frame" x="0.0" y="103" width="430" height="829"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="Ec0-I0-6P8">
-                                        <rect key="frame" x="0.0" y="0.0" width="430" height="710"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="430" height="738"/>
                                         <subviews>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Y1P-VR-sAG">
-                                                <rect key="frame" x="0.0" y="0.0" width="430" height="158"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="430" height="186"/>
                                                 <subviews>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Food Category" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qea-kp-h3d">
                                                         <rect key="frame" x="15" y="5" width="407" height="23"/>
@@ -162,16 +162,16 @@
                                                         <color key="highlightedColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                     </label>
                                                     <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="HOu-4g-zVW">
-                                                        <rect key="frame" x="0.0" y="36" width="430" height="122"/>
-                                                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                                        <rect key="frame" x="0.0" y="36" width="430" height="150"/>
+                                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         <constraints>
-                                                            <constraint firstAttribute="height" constant="122" id="T3H-Fc-5C1"/>
+                                                            <constraint firstAttribute="height" constant="150" id="T3H-Fc-5C1"/>
                                                         </constraints>
-                                                        <collectionViewFlowLayout key="collectionViewLayout" automaticEstimatedItemSize="YES" minimumLineSpacing="10" minimumInteritemSpacing="10" id="VSE-X3-Yu6">
+                                                        <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" minimumLineSpacing="10" minimumInteritemSpacing="10" id="VSE-X3-Yu6">
                                                             <size key="itemSize" width="128" height="128"/>
                                                             <size key="headerReferenceSize" width="0.0" height="0.0"/>
                                                             <size key="footerReferenceSize" width="0.0" height="0.0"/>
-                                                            <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                                            <inset key="sectionInset" minX="15" minY="2" maxX="15" maxY="2"/>
                                                         </collectionViewFlowLayout>
                                                         <cells/>
                                                         <connections>
@@ -180,7 +180,7 @@
                                                         </connections>
                                                     </collectionView>
                                                 </subviews>
-                                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <constraints>
                                                     <constraint firstItem="HOu-4g-zVW" firstAttribute="leading" secondItem="Y1P-VR-sAG" secondAttribute="leading" id="Mt0-NK-VeZ"/>
                                                     <constraint firstItem="qea-kp-h3d" firstAttribute="leading" secondItem="Y1P-VR-sAG" secondAttribute="leading" constant="15" id="NJI-wv-Wjw"/>
@@ -192,7 +192,7 @@
                                                 </constraints>
                                             </view>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="LQk-0V-qgP">
-                                                <rect key="frame" x="0.0" y="158" width="430" height="336"/>
+                                                <rect key="frame" x="0.0" y="186" width="430" height="336"/>
                                                 <subviews>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Popular Dishes" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3bU-7D-1do">
                                                         <rect key="frame" x="15" y="5" width="407" height="23"/>
@@ -227,7 +227,7 @@
                                                 </constraints>
                                             </view>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="mEg-LM-56R">
-                                                <rect key="frame" x="0.0" y="494" width="430" height="216"/>
+                                                <rect key="frame" x="0.0" y="522" width="430" height="216"/>
                                                 <subviews>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Chef's Specials" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xVs-Qv-kbD">
                                                         <rect key="frame" x="15" y="5" width="407" height="23"/>

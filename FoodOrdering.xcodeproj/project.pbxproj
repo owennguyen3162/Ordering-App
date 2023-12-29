@@ -22,6 +22,7 @@
 		46B37FB92B3C86E800CDEEB5 /* CategoryCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 46B37FB72B3C86E800CDEEB5 /* CategoryCollectionViewCell.xib */; };
 		46B37FBB2B3C8A4000CDEEB5 /* DishCategory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46B37FBA2B3C8A4000CDEEB5 /* DishCategory.swift */; };
 		46B37FBD2B3C8C9200CDEEB5 /* StringExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46B37FBC2B3C8C9200CDEEB5 /* StringExtension.swift */; };
+		46B37FE92B3F61C000CDEEB5 /* CardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46B37FE82B3F61C000CDEEB5 /* CardView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -41,6 +42,7 @@
 		46B37FB72B3C86E800CDEEB5 /* CategoryCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CategoryCollectionViewCell.xib; sourceTree = "<group>"; };
 		46B37FBA2B3C8A4000CDEEB5 /* DishCategory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DishCategory.swift; sourceTree = "<group>"; };
 		46B37FBC2B3C8C9200CDEEB5 /* StringExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StringExtension.swift; sourceTree = "<group>"; };
+		46B37FE82B3F61C000CDEEB5 /* CardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardView.swift; sourceTree = "<group>"; };
 		A0DDE19C8BADB9E5108E76BD /* Pods-FoodOrdering.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FoodOrdering.debug.xcconfig"; path = "Target Support Files/Pods-FoodOrdering/Pods-FoodOrdering.debug.xcconfig"; sourceTree = "<group>"; };
 		DE33DFF6467A22F8D9CA1179 /* Pods_FoodOrdering.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_FoodOrdering.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		FD6D6256CD61ACC41E32F8A4 /* Pods-FoodOrdering.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FoodOrdering.release.xcconfig"; path = "Target Support Files/Pods-FoodOrdering/Pods-FoodOrdering.release.xcconfig"; sourceTree = "<group>"; };
@@ -113,6 +115,7 @@
 		46B37FA42B3B221C00CDEEB5 /* CustomViews */ = {
 			isa = PBXGroup;
 			children = (
+				46B37FE72B3F619300CDEEB5 /* CardView */,
 				46B37FB42B3C86A400CDEEB5 /* CollectionViewCell */,
 			);
 			path = CustomViews;
@@ -168,6 +171,14 @@
 				46B37FB72B3C86E800CDEEB5 /* CategoryCollectionViewCell.xib */,
 			);
 			path = CategoryCollectionViewCell;
+			sourceTree = "<group>";
+		};
+		46B37FE72B3F619300CDEEB5 /* CardView */ = {
+			isa = PBXGroup;
+			children = (
+				46B37FE82B3F61C000CDEEB5 /* CardView.swift */,
+			);
+			path = CardView;
 			sourceTree = "<group>";
 		};
 		D5585EDA24F5EDF30B29F648 /* Pods */ = {
@@ -304,6 +315,7 @@
 				46B37F922B3B1DEE00CDEEB5 /* SceneDelegate.swift in Sources */,
 				46B37FB22B3C80C200CDEEB5 /* HomeViewController.swift in Sources */,
 				46B37FBB2B3C8A4000CDEEB5 /* DishCategory.swift in Sources */,
+				46B37FE92B3F61C000CDEEB5 /* CardView.swift in Sources */,
 				46B37FB02B3B2A4200CDEEB5 /* OnboardingCollectionViewCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -457,9 +469,11 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = G5J6PYNPJ6;
 				ENABLE_USER_SCRIPT_SANDBOXING = NO;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = FoodOrdering/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = FoodOrdering;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
@@ -487,9 +501,11 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = G5J6PYNPJ6;
 				ENABLE_USER_SCRIPT_SANDBOXING = NO;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = FoodOrdering/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = FoodOrdering;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;

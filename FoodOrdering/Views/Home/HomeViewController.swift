@@ -11,11 +11,11 @@ class HomeViewController: UIViewController {
 
     @IBOutlet var collectionView: UICollectionView!
     
-    var categoris: [DishCategory] = [.init(id: "1", name: "Africa Dish", image: "https://picsum.photos./100/200"),
-                                     .init(id: "1", name: "Africa Dish", image: "https://picsum.photos./100/200"),
-                                     .init(id: "1", name: "Africa Dish", image: "https://picsum.photos./100/200"),
-                                     .init(id: "1", name: "Africa Dish", image: "https://picsum.photos./100/200"),
-                                     .init(id: "1", name: "Africa Dish", image: "https://picsum.photos./100/200")]
+    var categoris: [DishCategory] = [.init(id: "1", name: "Africa Dish", image: "https://img.freepik.com/free-vector/isolated-delicious-hamburger-cartoon_1308-134032.jpg"),
+                                     .init(id: "1", name: "Africa Dish", image: "https://img.freepik.com/free-vector/isolated-delicious-hamburger-cartoon_1308-134032.jpg"),
+                                     .init(id: "1", name: "Africa Dish", image: "https://img.freepik.com/free-vector/isolated-delicious-hamburger-cartoon_1308-134032.jpg"),
+                                     .init(id: "1", name: "Africa Dish", image: "https://img.freepik.com/free-vector/isolated-delicious-hamburger-cartoon_1308-134032.jpg"),
+                                     .init(id: "1", name: "Africa Dish", image: "https://img.freepik.com/free-vector/isolated-delicious-hamburger-cartoon_1308-134032.jpg")]
     override func viewDidLoad() {
         super.viewDidLoad()
         registerCell()
@@ -48,6 +48,8 @@ extension HomeViewController: UICollectionViewDataSource{
 }
 
 extension HomeViewController: UICollectionViewDelegateFlowLayout{
-    
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
+        return CGSize(width: (collectionView.frame.width) / 2.5, height: ((collectionView.frame.height) / 2) - 7)
+    }
 }
 

@@ -18,6 +18,9 @@ class CategoryCollectionViewCell: UICollectionViewCell {
         return UINib(nibName: Identifier, bundle: nil)
     }
 
+    override class func awakeFromNib() {
+        super.awakeFromNib()
+    }
     
     func setup (category: DishCategory) {
         categoryLable.text = category.name
