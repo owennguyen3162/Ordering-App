@@ -11,6 +11,8 @@ class HomeViewController: UIViewController {
 
     @IBOutlet var CategorycollectionView: UICollectionView!
     @IBOutlet var PopularDishesCollectionView: UICollectionView!
+    @IBOutlet var ChefScpcialsCollectionView: UICollectionView!
+    
     
     var categoris: [DishCategory] = [.init(id: "1", name: "Africa Dish", image: "https://img.freepik.com/free-vector/isolated-delicious-hamburger-cartoon_1308-134032.jpg"),
                                      .init(id: "1", name: "Africa Dish", image: "https://domf5oio6qrcr.cloudfront.net/medialibrary/3440/conversions/w0714a16207251033667-thumb.jpg"),
@@ -19,6 +21,13 @@ class HomeViewController: UIViewController {
                                      .init(id: "1", name: "Africa Dish", image: "https://media.istockphoto.com/id/1322628932/photo/poke-bowl-with-salmon-avocado-quinoa-and-cucumber.jpg?s=612x612&w=0&k=20&c=dxyEXDzNYYjmKfNzi6QegEJQTbE-1jZZB4HtQKQABhs=")]
     
     var populars: [Dish] = [.init(id: "0", image: "https://img.freepik.com/premium-photo/seafood-cuisine-dish-food-plate-top-view-isolated-white-background_9493-20034.jpg", name: "Africa Dish", description: "Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old.", calories: 123.5),
+                           .init(id: "1", image: "https://c4.wallpaperflare.com/wallpaper/757/476/907/food-burgers-burger-white-background-wallpaper-preview.jpg", name: "Africa Dish", description: "Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old.", calories: 123.5),
+                           .init(id: "2", image: "https://media.istockphoto.com/id/1322628932/photo/poke-bowl-with-salmon-avocado-quinoa-and-cucumber.jpg?s=612x612&w=0&k=20&c=dxyEXDzNYYjmKfNzi6QegEJQTbE-1jZZB4HtQKQABhs=", name: "Africa Dish", description: "Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old.", calories: 123.5),
+                           .init(id: "3", image: "https://img.freepik.com/premium-photo/restaurant-menu-dish-traditional-restaurant-serving-appetizer-white-background-isolated-top-view_96064-1033.jpg", name: "Africa Dish", description: "Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old.", calories: 123.5),
+                           
+                         ]
+    
+    var specials: [Dish] = [.init(id: "0", image: "https://img.freepik.com/premium-photo/seafood-cuisine-dish-food-plate-top-view-isolated-white-background_9493-20034.jpg", name: "Africa Dish", description: "Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old.", calories: 123.5),
                            .init(id: "1", image: "https://c4.wallpaperflare.com/wallpaper/757/476/907/food-burgers-burger-white-background-wallpaper-preview.jpg", name: "Africa Dish", description: "Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old.", calories: 123.5),
                            .init(id: "2", image: "https://media.istockphoto.com/id/1322628932/photo/poke-bowl-with-salmon-avocado-quinoa-and-cucumber.jpg?s=612x612&w=0&k=20&c=dxyEXDzNYYjmKfNzi6QegEJQTbE-1jZZB4HtQKQABhs=", name: "Africa Dish", description: "Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old.", calories: 123.5),
                            .init(id: "3", image: "https://img.freepik.com/premium-photo/restaurant-menu-dish-traditional-restaurant-serving-appetizer-white-background-isolated-top-view_96064-1033.jpg", name: "Africa Dish", description: "Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old.", calories: 123.5),
@@ -36,6 +45,8 @@ class HomeViewController: UIViewController {
         
         PopularDishesCollectionView.register(PopularDishesCollectionViewCell.nib(), forCellWithReuseIdentifier: PopularDishesCollectionViewCell.identifier)
         
+          ChefScpcialsCollectionView.register(DishLandscapeCollectionViewCell.nib(), forCellWithReuseIdentifier: DishLandscapeCollectionViewCell.identifier)
+        
     }
 }
 
@@ -51,6 +62,8 @@ extension HomeViewController: UICollectionViewDataSource{
                 return categoris.count
             case PopularDishesCollectionView:
                 return populars.count
+            case ChefScpcialsCollectionView:
+                return specials.count
             default :
                 return 0
         }
@@ -70,7 +83,10 @@ extension HomeViewController: UICollectionViewDataSource{
             let cell = collectionView.dequeueReusableCell(withReuseIdentifier: PopularDishesCollectionViewCell.identifier, for: indexPath) as! PopularDishesCollectionViewCell
             cell.setup(dish: populars[indexPath.row])
             return cell
-
+        case ChefScpcialsCollectionView:
+            let cell = collectionView.dequeueReusableCell(withReuseIdentifier: DishLandscapeCollectionViewCell.identifier, for: indexPath) as! DishLandscapeCollectionViewCell
+            cell.setup(dish: specials[indexPath.row])
+            return cell
         default :
             return UICollectionViewCell()
             
