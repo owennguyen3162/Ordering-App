@@ -137,7 +137,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="54.418604651162788" y="-28.326180257510732"/>
+            <point key="canvasLocation" x="47" y="46"/>
         </scene>
         <!--Yummi-->
         <scene sceneID="uB9-iF-SMh">
@@ -349,7 +349,7 @@
                                         <color key="textColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="BH1-8t-jIk">
+                                    <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter your name" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="BH1-8t-jIk">
                                         <rect key="frame" x="0.0" y="128.33333333333337" width="400" height="45"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="45" id="wvy-qA-vpW"/>
@@ -399,6 +399,40 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="0vM-W0-vVf" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="2712.5581395348836" y="45.708154506437772"/>
+        </scene>
+        <!--List Dishes View Controller-->
+        <scene sceneID="Ef4-2c-CCj">
+            <objects>
+                <viewController storyboardIdentifier="ListDishesViewController" id="ij1-YO-fG4" customClass="ListDishesViewController" customModule="FoodOrdering" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="ayA-Fj-biP">
+                        <rect key="frame" x="0.0" y="0.0" width="430" height="932"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="Un2-zc-ifY">
+                                <rect key="frame" x="0.0" y="59" width="430" height="839"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <connections>
+                                    <outlet property="dataSource" destination="ij1-YO-fG4" id="F0R-wn-LhX"/>
+                                    <outlet property="delegate" destination="ij1-YO-fG4" id="ybw-5B-0Ti"/>
+                                </connections>
+                            </tableView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="J5c-jS-qZR"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="Un2-zc-ifY" firstAttribute="leading" secondItem="J5c-jS-qZR" secondAttribute="leading" id="avt-yW-h66"/>
+                            <constraint firstItem="J5c-jS-qZR" firstAttribute="trailing" secondItem="Un2-zc-ifY" secondAttribute="trailing" id="iE5-Wz-TrK"/>
+                            <constraint firstItem="J5c-jS-qZR" firstAttribute="bottom" secondItem="Un2-zc-ifY" secondAttribute="bottom" id="pLR-Cy-e8f"/>
+                            <constraint firstItem="Un2-zc-ifY" firstAttribute="top" secondItem="J5c-jS-qZR" secondAttribute="top" id="zrE-hN-eLa"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="listDishesTableView" destination="Un2-zc-ifY" id="XX3-SW-Ba8"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="hd3-Xq-Kf9" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3511" y="68"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="ynM-8e-nPY">
