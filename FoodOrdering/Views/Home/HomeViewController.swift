@@ -51,7 +51,18 @@ class HomeViewController: UIViewController {
 }
 
 extension HomeViewController: UICollectionViewDelegate{
-    
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+       
+        if collectionView == CategorycollectionView {
+            
+        } else {
+            let controller = DishDetailViewController.instantiate()
+            controller.dish = collectionView == PopularDishesCollectionView ?
+            populars[indexPath.row] : specials[indexPath.row]
+            navigationController?.pushViewController(controller, animated: true)
+        }
+      
+    }
 }
 
 extension HomeViewController: UICollectionViewDataSource{
